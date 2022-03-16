@@ -39,10 +39,17 @@ fun main() {
 //    }
 //    println(total(6.0,5.0))
 
-    var name: String = "Daniel"
+//    var name: String = "Daniel"
 //    name = null
-    var nullableName: String? = "Daniel"
-//    nullableName = null
+    var nullableName: String? = null
+
+    //elvis operator
+    val name = nullableName ?: "Guest"
+    println(name)
+
+    //not null assertion operator
+    var surname = nullableName!!.lowercase()
+    println(surname)
 
 
     //if let equivalent
