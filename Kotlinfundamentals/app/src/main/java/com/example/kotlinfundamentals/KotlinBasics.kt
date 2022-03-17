@@ -1,67 +1,51 @@
 package com.example.kotlinfundamentals
 
-import kotlin.math.pow
+import java.util.*
 
 fun main() {
+    println("Hello world")
 
-//    var x = 15
-//    do {
-//        println(x)
-//        x++
-//    } while (x <= 35)
+
+    val list = listOf("a", "b", "c")
+
+//    println(list.indices)
+//    if (-1 !in 0..list.lastIndex) {
+//        println("-1 is out of range")
+//    }
+//    if (list.size !in list.indices) {
+//        println("list size is out of valid list indices range, too")
+//    }
+
+//    val x = InitOrderDemo("NewOrderDemo")
 //    println(x)
+    val y = Pet()
+
+    val newPerson = Person(y)
+
+}
 
 
-//    for(i in 15 downTo 1 step 3){
-//       println(i)
+
+//class InitOrderDemo(name: String) {
+//    val firstProperty = "First property: $name".also(::println)
+//
+//    init {
+//        println("First initializer block that prints $name")
 //    }
 //
-//    for(x in 1.until(10).step(3)){
-//        println(x)
+//    val secondProperty = "Second property: ${name.length}".also(::println)
+//
+//    init {
+//        println("Second initializer block that prints ${name.length}")
 //    }
+//}
 
 
-//    var season = 3
-//    when(season){
-//        1 -> println("It's Spring")
-//        2 -> println("It's Summer")
-//        3 -> {
-//            println("It's Fall")
-//        }
-//        else -> println("Invalid Season")
-//    }
 
+class Person(val pets: MutableList<Pet> = mutableListOf())
 
-//    var month = 3
-//    when(month){
-//        in 3..5 -> println("Spring")
-//        in 12, 1, 2 -> println("Winter")
-//    }
-//    println(total(6.0,5.0))
-
-//    var name: String = "Daniel"
-//    name = null
-    var nullableName: String? = null
-
-    //elvis operator
-    val name = nullableName ?: "Guest"
-    println(name)
-
-    //not null assertion operator
-    var surname = nullableName!!.lowercase()
-    println(surname)
-
-
-    //if let equivalent
-
-    nullableName?.let { println(it.length) }
-}
-
-fun myFunction() {
-    println("Called from myFunction")
-}
-
-
-fun total(x: Double, y: Double): Double {
-    return x.pow(y)
+class Pet {
+    constructor(owner: Person) {
+        owner.pets.add(this) // adds this pet to the list of its owner's pets
+    }
 }
