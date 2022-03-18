@@ -1,51 +1,50 @@
 package com.example.kotlinfundamentals
 
-import java.util.*
-
-fun main() {
-    println("Hello world")
+import java.lang.IllegalArgumentException
 
 
-    val list = listOf("a", "b", "c")
-
-//    println(list.indices)
-//    if (-1 !in 0..list.lastIndex) {
-//        println("-1 is out of range")
-//    }
-//    if (list.size !in list.indices) {
-//        println("list size is out of valid list indices range, too")
-//    }
-
-//    val x = InitOrderDemo("NewOrderDemo")
-//    println(x)
-    val y = Pet()
-
-    val newPerson = Person(y)
+data class User(val id: Long, val name: String){
 
 }
 
+fun main() {
+    println("Hello world")
+//    val samsung1 = Phone("Android 11", "Samsung", "Galaxy S21")
+//    println(samsung1)
+//    println(samsung1.completeInfo)
 
+    val myCar = Car()
+    myCar.owner
 
-//class InitOrderDemo(name: String) {
-//    val firstProperty = "First property: $name".also(::println)
-//
+    println(myCar.myBrand)
+    myCar.maxSpeed = -30
+    println(myCar.maxSpeed)
+}
+
+//class Phone constructor(osName: String, brand: String, model: String){
+//    val completeInfo = "OS name: $osName, Phone brand: $brand, Phone model: $model"
 //    init {
-//        println("First initializer block that prints $name")
-//    }
-//
-//    val secondProperty = "Second property: ${name.length}".also(::println)
-//
-//    init {
-//        println("Second initializer block that prints ${name.length}")
+//        println("Initialising:> OS name: $osName, Phone brand: $brand, Phone model: $model")
 //    }
 //}
 
 
+class Car{
+    lateinit var owner: String
 
-class Person(val pets: MutableList<Pet> = mutableListOf())
+    val myBrand: String = "BMW"
+    get() {
+        return field.lowercase()
+    }
 
-class Pet {
-    constructor(owner: Person) {
-        owner.pets.add(this) // adds this pet to the list of its owner's pets
+
+    var maxSpeed: Int = 250
+    set(maxSpeed) {
+        field = if (maxSpeed > 0) maxSpeed else throw IllegalArgumentException("Max speed cannot be less than 0")
+
+    }
+
+    init {
+        this.owner = "Daniel"
     }
 }
