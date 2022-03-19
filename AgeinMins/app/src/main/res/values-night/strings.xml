@@ -1,7 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AgeinMins</string>
     <string name="calculate_your">Calculate Your</string>
     <string name="age">Age</string>
-    <string name="in_mins">In Minutes</string>
     <string name="button">Button</string>
 </resources>
