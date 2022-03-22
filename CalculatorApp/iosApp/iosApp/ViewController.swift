@@ -6,12 +6,14 @@
 //
 
 import UIKit
-
+import shared
 class ViewController: UIViewController {
+    let greet = Greeting().greeting()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        print(greet)
     }
 
 
