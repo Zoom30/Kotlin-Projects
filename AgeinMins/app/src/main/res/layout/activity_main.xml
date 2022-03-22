@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/bgColor"
+        android:background="@color/material_dynamic_primary90"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,48 +17,78 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/calculateYourText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:fontFamily="monospace"
             android:text="@string/calculate_your"
-            android:textColor="@color/textBlue"
+            android:textColor="@color/black"
             android:textSize="40sp"
             android:textStyle="bold" />
 
         <TextView
-
+            android:id="@+id/ageText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
-            android:background="@color/textBlue"
+            android:background="@color/ageBgColor"
             android:padding="20dp"
             android:text="@string/age"
-            android:textColor="@android:color/white"
+            android:textColor="#6D4C41"
             android:textSize="34sp" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/inMinutesText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
             android:fontFamily="monospace"
             android:text="@string/in_mins"
-            android:textColor="@color/textBlue"
+            android:textColor="@color/black"
             android:textSize="40sp"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/calculateButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
-            android:background="@color/textBlue"
+            android:background="@color/design_default_color_secondary_variant"
             android:text="@string/button"
-            android:textColor="@android:color/white" />
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/dateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:text="@string/textview"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/selectedText"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:text="@string/selected_date"
+            android:textSize="20sp"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/minutesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:text="@string/_1625761572"
+            android:textSize="34sp" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
