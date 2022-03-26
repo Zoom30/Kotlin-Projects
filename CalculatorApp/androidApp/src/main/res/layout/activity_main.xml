@@ -7,9 +7,23 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@color/lightGrey"
+            android:gravity="bottom|right"
+            android:padding="12dp"
+            android:text="@string/numberView"
+            android:textSize="48sp"
+            tools:ignore="RtlHardcoded" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -18,32 +32,36 @@
 
             <Button
                 android:id="@+id/button"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="onDigit"
-                android:text="7" />
+                android:text="@string/numberSeven" />
 
             <Button
                 android:id="@+id/button2"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="8" />
+                android:text="@string/numberEight" />
 
             <Button
                 android:id="@+id/button3"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="9" />
+                android:text="@string/numberNine" />
 
             <Button
                 android:id="@+id/button4"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="/" />
+                android:text="@string/divideSign" />
         </LinearLayout>
 
         <LinearLayout
@@ -53,31 +71,35 @@
 
             <Button
                 android:id="@+id/button5"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="4" />
+                android:text="@string/numberFour" />
 
             <Button
                 android:id="@+id/button6"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="5" />
+                android:text="@string/numberFive" />
 
             <Button
                 android:id="@+id/button7"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="6" />
+                android:text="@string/numberSix" />
 
             <Button
                 android:id="@+id/button8"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="*" />
+                android:text="@string/timesSign" />
         </LinearLayout>
 
         <LinearLayout
@@ -87,31 +109,35 @@
 
             <Button
                 android:id="@+id/button9"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="1" />
+                android:text="@string/numberOne" />
 
             <Button
                 android:id="@+id/button10"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="2" />
+                android:text="@string/numberTwo" />
 
             <Button
                 android:id="@+id/button11"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="3" />
+                android:text="@string/numberThree" />
 
             <Button
                 android:id="@+id/button12"
+                style="@android:style/Widget.Holo.Button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="-" />
+                android:text="@string/minusSign"/>
         </LinearLayout>
 
         <LinearLayout
@@ -121,24 +147,34 @@
 
             <Button
                 android:id="@+id/button20"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:text="0" />
-
-            <Button
-                android:id="@+id/button22"
-                android:layout_width="wrap_content"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="+" />
+                android:text="@string/numberZero" />
 
-            <Button
-                android:id="@+id/button21"
+
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="CLR" />
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button22"
+                    style="@android:style/Widget.Holo.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/plusSign" />
+
+                <Button
+                    android:id="@+id/button21"
+                    style="@android:style/Widget.Holo.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/clearSign" />
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -149,10 +185,12 @@
 
             <Button
                 android:id="@+id/equalButton"
-                android:layout_width="wrap_content"
+                style="@android:style/Widget.Holo.Button"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="=" />
+                android:text="@string/equalSign"
+                android:textColor="#795548" />
 
         </LinearLayout>
 
